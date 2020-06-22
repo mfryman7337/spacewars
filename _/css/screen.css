@@ -1,0 +1,1169 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../../Applications/compass.app/Contents/Resources/ruby/compass_0.11/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*$shinyGradient: "linear-gradient(top, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0) 100%)";*/
+/*$darkGradient: "linear-gradient(top, hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0) 0%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.15) 50%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.25) 50%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.15) 100%)";*/
+/* line 45, ../sass/_core.scss */
+.gradient, .box h1, #actions h1, .planetModalAction h1, #messageQueue h1, #mainMenu h1, #helpButton h1, #skipTurnButton h1, .message h1, #modalAction h1, #waitingForPlayers h1 {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* line 49, ../sass/_core.scss */
+.gradient.dark, .bottomBar, .bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction, #actions .buttons a span, #actions .stats, .planetModalAction .buttons a span, .planetModalAction .stats, #messageQueue .buttons a span, #messageQueue .stats, #mainMenu .buttons a span, #mainMenu .stats, #helpButton .buttons a span, #helpButton .stats, #skipTurnButton .buttons a span, #skipTurnButton .stats, .box h1.dark, #actions h1.dark, .planetModalAction h1.dark, #messageQueue h1.dark, #mainMenu h1.dark, #helpButton h1.dark, #skipTurnButton h1.dark, .message h1.dark, #modalAction h1.dark, #waitingForPlayers h1.dark {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(13, 13, 13, 0)), color-stop(50%, rgba(13, 13, 13, 0.15)), color-stop(50%, rgba(13, 13, 13, 0.25)), color-stop(100%, rgba(13, 13, 13, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: -moz-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: -o-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: -ms-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+}
+
+/* line 54, ../sass/_core.scss */
+.bottomBar, .bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction, #actions .buttons a span, #actions .stats, .planetModalAction .buttons a span, .planetModalAction .stats, #messageQueue .buttons a span, #messageQueue .stats, #mainMenu .buttons a span, #mainMenu .stats, #helpButton .buttons a span, #helpButton .stats, #skipTurnButton .buttons a span, #skipTurnButton .stats {
+  line-height: 24px;
+  height: 24px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: none;
+  -moz-border-radius: 0 0 8px 8px;
+  -webkit-border-radius: 0 0 8px 8px;
+  -o-border-radius: 0 0 8px 8px;
+  -ms-border-radius: 0 0 8px 8px;
+  -khtml-border-radius: 0 0 8px 8px;
+  border-radius: 0 0 8px 8px;
+}
+
+/* line 65, ../sass/_core.scss */
+.bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction {
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 18px;
+  height: 32px;
+  line-height: 32px;
+  margin: auto;
+  -moz-transition-property: color, border-color, background-color;
+  -webkit-transition-property: color, border-color, background-color;
+  -o-transition-property: color, border-color, background-color;
+  transition-property: color, border-color, background-color;
+  -moz-transition-duration: 0.15s;
+  -webkit-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  background-color: #33cc33;
+}
+/* line 82, ../sass/_core.scss */
+.bottomButton:hover, .message .startGame:hover, #mainMenu .startGame:hover, #modalAction #cancelModalAction:hover, .planetModalAction .selectModalAction:hover {
+  background-color: #19e619;
+}
+/* line 86, ../sass/_core.scss */
+.bottomButton:active, .message .startGame:active, #mainMenu .startGame:active, #modalAction #cancelModalAction:active, .planetModalAction .selectModalAction:active {
+  background-color: #0f8a0f;
+}
+
+/* line 92, ../sass/_core.scss */
+.statusText, .bottomBar, .bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction, #actions .buttons a span, #actions .stats, .planetModalAction .buttons a span, .planetModalAction .stats, #messageQueue .buttons a span, #messageQueue .stats, #mainMenu .buttons a span, #mainMenu .stats, #helpButton .buttons a span, #helpButton .stats, #skipTurnButton .buttons a span, #skipTurnButton .stats, .box h1, #actions h1, .planetModalAction h1, #messageQueue h1, #mainMenu h1, #helpButton h1, #skipTurnButton h1, .message h1, #modalAction h1, #waitingForPlayers h1 {
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*$shinyGradient: "linear-gradient(top, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0) 100%)";*/
+/*$darkGradient: "linear-gradient(top, hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0) 0%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.15) 50%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.25) 50%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.15) 100%)";*/
+/* line 45, ../sass/_core.scss */
+.gradient, .box h1, #actions h1, .planetModalAction h1, #messageQueue h1, #mainMenu h1, #helpButton h1, #skipTurnButton h1, .message h1, #modalAction h1, #waitingForPlayers h1 {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* line 49, ../sass/_core.scss */
+.gradient.dark, .bottomBar, .bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction, #actions .buttons a span, #actions .stats, .planetModalAction .buttons a span, .planetModalAction .stats, #messageQueue .buttons a span, #messageQueue .stats, #mainMenu .buttons a span, #mainMenu .stats, #helpButton .buttons a span, #helpButton .stats, #skipTurnButton .buttons a span, #skipTurnButton .stats, .box h1.dark, #actions h1.dark, .planetModalAction h1.dark, #messageQueue h1.dark, #mainMenu h1.dark, #helpButton h1.dark, #skipTurnButton h1.dark, .message h1.dark, #modalAction h1.dark, #waitingForPlayers h1.dark {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(13, 13, 13, 0)), color-stop(50%, rgba(13, 13, 13, 0.15)), color-stop(50%, rgba(13, 13, 13, 0.25)), color-stop(100%, rgba(13, 13, 13, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: -moz-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: -o-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: -ms-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+}
+
+/* line 54, ../sass/_core.scss */
+.bottomBar, .bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction, #actions .buttons a span, #actions .stats, .planetModalAction .buttons a span, .planetModalAction .stats, #messageQueue .buttons a span, #messageQueue .stats, #mainMenu .buttons a span, #mainMenu .stats, #helpButton .buttons a span, #helpButton .stats, #skipTurnButton .buttons a span, #skipTurnButton .stats {
+  line-height: 24px;
+  height: 24px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: none;
+  -moz-border-radius: 0 0 8px 8px;
+  -webkit-border-radius: 0 0 8px 8px;
+  -o-border-radius: 0 0 8px 8px;
+  -ms-border-radius: 0 0 8px 8px;
+  -khtml-border-radius: 0 0 8px 8px;
+  border-radius: 0 0 8px 8px;
+}
+
+/* line 65, ../sass/_core.scss */
+.bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction {
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 18px;
+  height: 32px;
+  line-height: 32px;
+  margin: auto;
+  -moz-transition-property: color, border-color, background-color;
+  -webkit-transition-property: color, border-color, background-color;
+  -o-transition-property: color, border-color, background-color;
+  transition-property: color, border-color, background-color;
+  -moz-transition-duration: 0.15s;
+  -webkit-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  background-color: #33cc33;
+}
+/* line 82, ../sass/_core.scss */
+.bottomButton:hover, .message .startGame:hover, #mainMenu .startGame:hover, #modalAction #cancelModalAction:hover, .planetModalAction .selectModalAction:hover {
+  background-color: #19e619;
+}
+/* line 86, ../sass/_core.scss */
+.bottomButton:active, .message .startGame:active, #mainMenu .startGame:active, #modalAction #cancelModalAction:active, .planetModalAction .selectModalAction:active {
+  background-color: #0f8a0f;
+}
+
+/* line 92, ../sass/_core.scss */
+.statusText, .bottomBar, .bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction, #actions .buttons a span, #actions .stats, .planetModalAction .buttons a span, .planetModalAction .stats, #messageQueue .buttons a span, #messageQueue .stats, #mainMenu .buttons a span, #mainMenu .stats, #helpButton .buttons a span, #helpButton .stats, #skipTurnButton .buttons a span, #skipTurnButton .stats, .box h1, #actions h1, .planetModalAction h1, #messageQueue h1, #mainMenu h1, #helpButton h1, #skipTurnButton h1, .message h1, #modalAction h1, #waitingForPlayers h1 {
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 3, ../sass/_button.scss */
+.button, #actions .buttons a, .planetModalAction .buttons a, #messageQueue .buttons a, #mainMenu .buttons a, #helpButton .buttons a, #skipTurnButton .buttons a {
+  text-align: center;
+  cursor: pointer;
+  float: left;
+  width: 72px;
+  height: 72px;
+  line-height: 121px;
+  background-position: center -14px;
+  background-repeat: no-repeat;
+  margin: 8px 4px 8px 4px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  -moz-background-size: 84px 84px;
+  -webkit-background-size: 84px 84px;
+  -o-background-size: 84px 84px;
+  background-size: 84px 84px;
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.25);
+  text-transform: capitalize;
+}
+/* line 21, ../sass/_button.scss */
+.button:hover, #actions .buttons a:hover, .planetModalAction .buttons a:hover, #messageQueue .buttons a:hover, #mainMenu .buttons a:hover, #helpButton .buttons a:hover, #skipTurnButton .buttons a:hover, .button:focus, #actions .buttons a:focus, .planetModalAction .buttons a:focus, #messageQueue .buttons a:focus, #mainMenu .buttons a:focus, #helpButton .buttons a:focus, #skipTurnButton .buttons a:focus {
+  color: #fff;
+  border-color: #fff;
+  background-color: #1466b8;
+}
+/* line 27, ../sass/_button.scss */
+.button:active, #actions .buttons a:active, .planetModalAction .buttons a:active, #messageQueue .buttons a:active, #mainMenu .buttons a:active, #helpButton .buttons a:active, #skipTurnButton .buttons a:active {
+  -moz-box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.5);
+  -moz-transform: scale(0.975, 0.975);
+  -webkit-transform: scale(0.975, 0.975);
+  -o-transform: scale(0.975, 0.975);
+  -ms-transform: scale(0.975, 0.975);
+  transform: scale(0.975, 0.975);
+  background-color: #1a1a1a;
+}
+/* line 33, ../sass/_button.scss */
+.button.hidden, #actions .buttons a.hidden, .planetModalAction .buttons a.hidden, #messageQueue .buttons a.hidden, #mainMenu .buttons a.hidden, #helpButton .buttons a.hidden, #skipTurnButton .buttons a.hidden {
+  display: none;
+}
+/* line 37, ../sass/_button.scss */
+.button strong, #actions .buttons a strong, .planetModalAction .buttons a strong, #messageQueue .buttons a strong, #mainMenu .buttons a strong, #helpButton .buttons a strong, #skipTurnButton .buttons a strong {
+  font-weight: bold;
+  text-decoration: underline;
+}
+/* line 42, ../sass/_button.scss */
+.button span, #actions .buttons a span, .planetModalAction .buttons a span, #messageQueue .buttons a span, #mainMenu .buttons a span, #helpButton .buttons a span, #skipTurnButton .buttons a span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  text-transform: none;
+  background-color: inherit;
+  display: none;
+}
+/* line 53, ../sass/_button.scss */
+.button:hover span, #actions .buttons a:hover span, .planetModalAction .buttons a:hover span, #messageQueue .buttons a:hover span, #mainMenu .buttons a:hover span, #helpButton .buttons a:hover span, #skipTurnButton .buttons a:hover span, .button:focus span, #actions .buttons a:focus span, .planetModalAction .buttons a:focus span, #messageQueue .buttons a:focus span, #mainMenu .buttons a:focus span, #helpButton .buttons a:focus span, #skipTurnButton .buttons a:focus span {
+  display: block;
+}
+/* line 58, ../sass/_button.scss */
+.button:active span, #actions .buttons a:active span, .planetModalAction .buttons a:active span, #messageQueue .buttons a:active span, #mainMenu .buttons a:active span, #helpButton .buttons a:active span, #skipTurnButton .buttons a:active span {
+  display: none;
+}
+/* line 62, ../sass/_button.scss */
+.button.disabled, #actions .buttons a.disabled, .planetModalAction .buttons a.disabled, #messageQueue .buttons a.disabled, #mainMenu .buttons a.disabled, #helpButton .buttons a.disabled, #skipTurnButton .buttons a.disabled {
+  cursor: auto;
+  background-image: none;
+  background-color: transparent;
+  border-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+/* line 71, ../sass/_button.scss */
+.button.disabled:active, #actions .buttons a.disabled:active, .planetModalAction .buttons a.disabled:active, #messageQueue .buttons a.disabled:active, #mainMenu .buttons a.disabled:active, #helpButton .buttons a.disabled:active, #skipTurnButton .buttons a.disabled:active {
+  -moz-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+/* line 75, ../sass/_button.scss */
+.button.disabled:hover span, #actions .buttons a.disabled:hover span, .planetModalAction .buttons a.disabled:hover span, #messageQueue .buttons a.disabled:hover span, #mainMenu .buttons a.disabled:hover span, #helpButton .buttons a.disabled:hover span, #skipTurnButton .buttons a.disabled:hover span, .button.disabled:focus span, #actions .buttons a.disabled:focus span, .planetModalAction .buttons a.disabled:focus span, #messageQueue .buttons a.disabled:focus span, #mainMenu .buttons a.disabled:focus span, #helpButton .buttons a.disabled:focus span, #skipTurnButton .buttons a.disabled:focus span, .button.disabled:active span, #actions .buttons a.disabled:active span, .planetModalAction .buttons a.disabled:active span, #messageQueue .buttons a.disabled:active span, #mainMenu .buttons a.disabled:active span, #helpButton .buttons a.disabled:active span, #skipTurnButton .buttons a.disabled:active span {
+  display: none;
+}
+/* line 80, ../sass/_button.scss */
+.button#colonizeAction, #actions .buttons a#colonizeAction, .planetModalAction .buttons a#colonizeAction, #messageQueue .buttons a#colonizeAction, #mainMenu .buttons a#colonizeAction, #helpButton .buttons a#colonizeAction, #skipTurnButton .buttons a#colonizeAction {
+  background-image: url('../tex/84-colonize.png?1324238300'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: url('../tex/84-colonize.png?1324238300'), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-colonize.png?1324238300'), -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-colonize.png?1324238300'), -o-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-colonize.png?1324238300'), -ms-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-colonize.png?1324238300'), linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  /*    span {
+          background-image: image-url($image);
+      }*/
+}
+/* line 7, ../sass/_core.scss */
+.button#colonizeAction:hover, #actions .buttons a#colonizeAction:hover, .planetModalAction .buttons a#colonizeAction:hover, #messageQueue .buttons a#colonizeAction:hover, #mainMenu .buttons a#colonizeAction:hover, #helpButton .buttons a#colonizeAction:hover, #skipTurnButton .buttons a#colonizeAction:hover, .button#colonizeAction:focus, #actions .buttons a#colonizeAction:focus, .planetModalAction .buttons a#colonizeAction:focus, #messageQueue .buttons a#colonizeAction:focus, #mainMenu .buttons a#colonizeAction:focus, #helpButton .buttons a#colonizeAction:focus, #skipTurnButton .buttons a#colonizeAction:focus {
+  background-color: #14b814;
+}
+/* line 11, ../sass/_core.scss */
+.button#colonizeAction:active, #actions .buttons a#colonizeAction:active, .planetModalAction .buttons a#colonizeAction:active, #messageQueue .buttons a#colonizeAction:active, #mainMenu .buttons a#colonizeAction:active, #helpButton .buttons a#colonizeAction:active, #skipTurnButton .buttons a#colonizeAction:active {
+  background-color: #0f8a0f;
+}
+/* line 15, ../sass/_core.scss */
+.button#colonizeAction.disabled, #actions .buttons a#colonizeAction.disabled, .planetModalAction .buttons a#colonizeAction.disabled, #messageQueue .buttons a#colonizeAction.disabled, #mainMenu .buttons a#colonizeAction.disabled, #helpButton .buttons a#colonizeAction.disabled, #skipTurnButton .buttons a#colonizeAction.disabled {
+  background-color: transparent;
+  background-image: url('../tex/84-colonize.png?1324238300');
+}
+/* line 84, ../sass/_button.scss */
+.button#mineAction, #actions .buttons a#mineAction, .planetModalAction .buttons a#mineAction, #messageQueue .buttons a#mineAction, #mainMenu .buttons a#mineAction, #helpButton .buttons a#mineAction, #skipTurnButton .buttons a#mineAction {
+  background-image: url('../tex/84-mine.png?1324238321'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: url('../tex/84-mine.png?1324238321'), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-mine.png?1324238321'), -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-mine.png?1324238321'), -o-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-mine.png?1324238321'), -ms-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-mine.png?1324238321'), linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  /*    span {
+          background-image: image-url($image);
+      }*/
+}
+/* line 7, ../sass/_core.scss */
+.button#mineAction:hover, #actions .buttons a#mineAction:hover, .planetModalAction .buttons a#mineAction:hover, #messageQueue .buttons a#mineAction:hover, #mainMenu .buttons a#mineAction:hover, #helpButton .buttons a#mineAction:hover, #skipTurnButton .buttons a#mineAction:hover, .button#mineAction:focus, #actions .buttons a#mineAction:focus, .planetModalAction .buttons a#mineAction:focus, #messageQueue .buttons a#mineAction:focus, #mainMenu .buttons a#mineAction:focus, #helpButton .buttons a#mineAction:focus, #skipTurnButton .buttons a#mineAction:focus {
+  background-color: #b86614;
+}
+/* line 11, ../sass/_core.scss */
+.button#mineAction:active, #actions .buttons a#mineAction:active, .planetModalAction .buttons a#mineAction:active, #messageQueue .buttons a#mineAction:active, #mainMenu .buttons a#mineAction:active, #helpButton .buttons a#mineAction:active, #skipTurnButton .buttons a#mineAction:active {
+  background-color: #8a4d0f;
+}
+/* line 15, ../sass/_core.scss */
+.button#mineAction.disabled, #actions .buttons a#mineAction.disabled, .planetModalAction .buttons a#mineAction.disabled, #messageQueue .buttons a#mineAction.disabled, #mainMenu .buttons a#mineAction.disabled, #helpButton .buttons a#mineAction.disabled, #skipTurnButton .buttons a#mineAction.disabled {
+  background-color: transparent;
+  background-image: url('../tex/84-mine.png?1324238321');
+}
+/* line 88, ../sass/_button.scss */
+.button#fortifyAction, #actions .buttons a#fortifyAction, .planetModalAction .buttons a#fortifyAction, #messageQueue .buttons a#fortifyAction, #mainMenu .buttons a#fortifyAction, #helpButton .buttons a#fortifyAction, #skipTurnButton .buttons a#fortifyAction {
+  background-image: url('../tex/84-fortify.png?1324238338'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: url('../tex/84-fortify.png?1324238338'), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-fortify.png?1324238338'), -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-fortify.png?1324238338'), -o-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-fortify.png?1324238338'), -ms-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-fortify.png?1324238338'), linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  /*    span {
+          background-image: image-url($image);
+      }*/
+}
+/* line 7, ../sass/_core.scss */
+.button#fortifyAction:hover, #actions .buttons a#fortifyAction:hover, .planetModalAction .buttons a#fortifyAction:hover, #messageQueue .buttons a#fortifyAction:hover, #mainMenu .buttons a#fortifyAction:hover, #helpButton .buttons a#fortifyAction:hover, #skipTurnButton .buttons a#fortifyAction:hover, .button#fortifyAction:focus, #actions .buttons a#fortifyAction:focus, .planetModalAction .buttons a#fortifyAction:focus, #messageQueue .buttons a#fortifyAction:focus, #mainMenu .buttons a#fortifyAction:focus, #helpButton .buttons a#fortifyAction:focus, #skipTurnButton .buttons a#fortifyAction:focus {
+  background-color: #149cb8;
+}
+/* line 11, ../sass/_core.scss */
+.button#fortifyAction:active, #actions .buttons a#fortifyAction:active, .planetModalAction .buttons a#fortifyAction:active, #messageQueue .buttons a#fortifyAction:active, #mainMenu .buttons a#fortifyAction:active, #helpButton .buttons a#fortifyAction:active, #skipTurnButton .buttons a#fortifyAction:active {
+  background-color: #0f758a;
+}
+/* line 15, ../sass/_core.scss */
+.button#fortifyAction.disabled, #actions .buttons a#fortifyAction.disabled, .planetModalAction .buttons a#fortifyAction.disabled, #messageQueue .buttons a#fortifyAction.disabled, #mainMenu .buttons a#fortifyAction.disabled, #helpButton .buttons a#fortifyAction.disabled, #skipTurnButton .buttons a#fortifyAction.disabled {
+  background-color: transparent;
+  background-image: url('../tex/84-fortify.png?1324238338');
+}
+/* line 92, ../sass/_button.scss */
+.button#cancelAction, #actions .buttons a#cancelAction, .planetModalAction .buttons a#cancelAction, #messageQueue .buttons a#cancelAction, #mainMenu .buttons a#cancelAction, #helpButton .buttons a#cancelAction, #skipTurnButton .buttons a#cancelAction {
+  background-image: url('../tex/84-cancel.png?1324238381'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: url('../tex/84-cancel.png?1324238381'), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-cancel.png?1324238381'), -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-cancel.png?1324238381'), -o-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-cancel.png?1324238381'), -ms-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-cancel.png?1324238381'), linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  /*    span {
+          background-image: image-url($image);
+      }*/
+}
+/* line 7, ../sass/_core.scss */
+.button#cancelAction:hover, #actions .buttons a#cancelAction:hover, .planetModalAction .buttons a#cancelAction:hover, #messageQueue .buttons a#cancelAction:hover, #mainMenu .buttons a#cancelAction:hover, #helpButton .buttons a#cancelAction:hover, #skipTurnButton .buttons a#cancelAction:hover, .button#cancelAction:focus, #actions .buttons a#cancelAction:focus, .planetModalAction .buttons a#cancelAction:focus, #messageQueue .buttons a#cancelAction:focus, #mainMenu .buttons a#cancelAction:focus, #helpButton .buttons a#cancelAction:focus, #skipTurnButton .buttons a#cancelAction:focus {
+  background-color: #b81414;
+}
+/* line 11, ../sass/_core.scss */
+.button#cancelAction:active, #actions .buttons a#cancelAction:active, .planetModalAction .buttons a#cancelAction:active, #messageQueue .buttons a#cancelAction:active, #mainMenu .buttons a#cancelAction:active, #helpButton .buttons a#cancelAction:active, #skipTurnButton .buttons a#cancelAction:active {
+  background-color: #8a0f0f;
+}
+/* line 15, ../sass/_core.scss */
+.button#cancelAction.disabled, #actions .buttons a#cancelAction.disabled, .planetModalAction .buttons a#cancelAction.disabled, #messageQueue .buttons a#cancelAction.disabled, #mainMenu .buttons a#cancelAction.disabled, #helpButton .buttons a#cancelAction.disabled, #skipTurnButton .buttons a#cancelAction.disabled {
+  background-color: transparent;
+  background-image: url('../tex/84-cancel.png?1324238381');
+}
+/* line 96, ../sass/_button.scss */
+.button#attackAction, #actions .buttons a#attackAction, .planetModalAction .buttons a#attackAction, #messageQueue .buttons a#attackAction, #mainMenu .buttons a#attackAction, #helpButton .buttons a#attackAction, #skipTurnButton .buttons a#attackAction {
+  background-image: url('../tex/84-attack.png?1324238311'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: url('../tex/84-attack.png?1324238311'), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-attack.png?1324238311'), -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-attack.png?1324238311'), -o-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-attack.png?1324238311'), -ms-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: url('../tex/84-attack.png?1324238311'), linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  /*    span {
+          background-image: image-url($image);
+      }*/
+}
+/* line 7, ../sass/_core.scss */
+.button#attackAction:hover, #actions .buttons a#attackAction:hover, .planetModalAction .buttons a#attackAction:hover, #messageQueue .buttons a#attackAction:hover, #mainMenu .buttons a#attackAction:hover, #helpButton .buttons a#attackAction:hover, #skipTurnButton .buttons a#attackAction:hover, .button#attackAction:focus, #actions .buttons a#attackAction:focus, .planetModalAction .buttons a#attackAction:focus, #messageQueue .buttons a#attackAction:focus, #mainMenu .buttons a#attackAction:focus, #helpButton .buttons a#attackAction:focus, #skipTurnButton .buttons a#attackAction:focus {
+  background-color: #14b814;
+}
+/* line 11, ../sass/_core.scss */
+.button#attackAction:active, #actions .buttons a#attackAction:active, .planetModalAction .buttons a#attackAction:active, #messageQueue .buttons a#attackAction:active, #mainMenu .buttons a#attackAction:active, #helpButton .buttons a#attackAction:active, #skipTurnButton .buttons a#attackAction:active {
+  background-color: #0f8a0f;
+}
+/* line 15, ../sass/_core.scss */
+.button#attackAction.disabled, #actions .buttons a#attackAction.disabled, .planetModalAction .buttons a#attackAction.disabled, #messageQueue .buttons a#attackAction.disabled, #mainMenu .buttons a#attackAction.disabled, #helpButton .buttons a#attackAction.disabled, #skipTurnButton .buttons a#attackAction.disabled {
+  background-color: transparent;
+  background-image: url('../tex/84-attack.png?1324238311');
+}
+
+/*$shinyGradient: "linear-gradient(top, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0) 100%)";*/
+/*$darkGradient: "linear-gradient(top, hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0) 0%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.15) 50%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.25) 50%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.15) 100%)";*/
+/* line 45, ../sass/_core.scss */
+.gradient, .box h1, #actions h1, .planetModalAction h1, #messageQueue h1, #mainMenu h1, #helpButton h1, #skipTurnButton h1, .message h1, #modalAction h1, #waitingForPlayers h1 {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* line 49, ../sass/_core.scss */
+.gradient.dark, .bottomBar, .bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction, #actions .buttons a span, #actions .stats, .planetModalAction .buttons a span, .planetModalAction .stats, #messageQueue .buttons a span, #messageQueue .stats, #mainMenu .buttons a span, #mainMenu .stats, #helpButton .buttons a span, #helpButton .stats, #skipTurnButton .buttons a span, #skipTurnButton .stats, .box h1.dark, #actions h1.dark, .planetModalAction h1.dark, #messageQueue h1.dark, #mainMenu h1.dark, #helpButton h1.dark, #skipTurnButton h1.dark, .message h1.dark, #modalAction h1.dark, #waitingForPlayers h1.dark {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(13, 13, 13, 0)), color-stop(50%, rgba(13, 13, 13, 0.15)), color-stop(50%, rgba(13, 13, 13, 0.25)), color-stop(100%, rgba(13, 13, 13, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: -moz-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: -o-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: -ms-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+  background-image: linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%);
+}
+
+/* line 54, ../sass/_core.scss */
+.bottomBar, .bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction, #actions .buttons a span, #actions .stats, .planetModalAction .buttons a span, .planetModalAction .stats, #messageQueue .buttons a span, #messageQueue .stats, #mainMenu .buttons a span, #mainMenu .stats, #helpButton .buttons a span, #helpButton .stats, #skipTurnButton .buttons a span, #skipTurnButton .stats {
+  line-height: 24px;
+  height: 24px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: none;
+  -moz-border-radius: 0 0 8px 8px;
+  -webkit-border-radius: 0 0 8px 8px;
+  -o-border-radius: 0 0 8px 8px;
+  -ms-border-radius: 0 0 8px 8px;
+  -khtml-border-radius: 0 0 8px 8px;
+  border-radius: 0 0 8px 8px;
+}
+
+/* line 65, ../sass/_core.scss */
+.bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction {
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 18px;
+  height: 32px;
+  line-height: 32px;
+  margin: auto;
+  -moz-transition-property: color, border-color, background-color;
+  -webkit-transition-property: color, border-color, background-color;
+  -o-transition-property: color, border-color, background-color;
+  transition-property: color, border-color, background-color;
+  -moz-transition-duration: 0.15s;
+  -webkit-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  background-color: #33cc33;
+}
+/* line 82, ../sass/_core.scss */
+.bottomButton:hover, .message .startGame:hover, #mainMenu .startGame:hover, #modalAction #cancelModalAction:hover, .planetModalAction .selectModalAction:hover {
+  background-color: #19e619;
+}
+/* line 86, ../sass/_core.scss */
+.bottomButton:active, .message .startGame:active, #mainMenu .startGame:active, #modalAction #cancelModalAction:active, .planetModalAction .selectModalAction:active {
+  background-color: #0f8a0f;
+}
+
+/* line 92, ../sass/_core.scss */
+.statusText, .bottomBar, .bottomButton, .message .startGame, #mainMenu .startGame, #modalAction #cancelModalAction, .planetModalAction .selectModalAction, #actions .buttons a span, #actions .stats, .planetModalAction .buttons a span, .planetModalAction .stats, #messageQueue .buttons a span, #messageQueue .stats, #mainMenu .buttons a span, #mainMenu .stats, #helpButton .buttons a span, #helpButton .stats, #skipTurnButton .buttons a span, #skipTurnButton .stats, .box h1, #actions h1, .planetModalAction h1, #messageQueue h1, #mainMenu h1, #helpButton h1, #skipTurnButton h1, .message h1, #modalAction h1, #waitingForPlayers h1 {
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 3, ../sass/_box.scss */
+.box, #actions, .planetModalAction, #messageQueue, #mainMenu, #helpButton, #skipTurnButton, .message, #modalAction, #waitingForPlayers {
+  background: #333333;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  max-width: 344px;
+  margin: auto;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  color: #fff;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+}
+/* line 18, ../sass/_box.scss */
+.box.hidden, .hidden#actions, .hidden.planetModalAction, .hidden#messageQueue, .hidden#mainMenu, .hidden#helpButton, .hidden#skipTurnButton, .hidden.message, .hidden#modalAction, .hidden#waitingForPlayers {
+  transform: translate(-9999px, -9999px) !important;
+}
+/* line 22, ../sass/_box.scss */
+.box h1, #actions h1, .planetModalAction h1, #messageQueue h1, #mainMenu h1, #helpButton h1, #skipTurnButton h1, .message h1, #modalAction h1, #waitingForPlayers h1 {
+  letter-spacing: 6px;
+  padding-left: 6px;
+  text-transform: uppercase;
+  line-height: 28px;
+  height: 30px;
+  -moz-border-radius: 6px 6px;
+  -webkit-border-radius: 6px 6px;
+  -o-border-radius: 6px 6px;
+  -ms-border-radius: 6px 6px;
+  -khtml-border-radius: 6px 6px;
+  border-radius: 6px 6px;
+}
+/* line 33, ../sass/_box.scss */
+.box strong, #actions strong, .planetModalAction strong, #messageQueue strong, #mainMenu strong, #helpButton strong, #skipTurnButton strong, .message strong, #modalAction strong, #waitingForPlayers strong {
+  font-weight: bold;
+}
+
+/* line 38, ../sass/_box.scss */
+.box-content, #actions .buttons, .planetModalAction .buttons, #messageQueue .buttons, #mainMenu .buttons, #helpButton .buttons, #skipTurnButton .buttons, .message .content, #mainMenu .content, #messageQueue .content {
+  clear: both;
+  list-style: none;
+  background: rgba(13, 13, 13, 0.5);
+  -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
+  -o-border-radius: 8px 8px 0 0;
+  -ms-border-radius: 8px 8px 0 0;
+  -khtml-border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 0 0;
+  float: left;
+  padding: 0 4px;
+  -moz-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.65);
+  -o-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.65);
+  box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.65);
+}
+
+/* line 13, ../sass/screen.scss */
+body {
+  overflow: hidden;
+  font: 16px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #000;
+}
+
+/* line 20, ../sass/screen.scss */
+#promoBody {
+  overflow: auto;
+}
+
+/* line 24, ../sass/screen.scss */
+#bigImage {
+  display: block;
+  margin: 0 auto;
+}
+/* line 28, ../sass/screen.scss */
+#bigImage img {
+  border: 0;
+}
+
+/* line 33, ../sass/screen.scss */
+::selection {
+  background-color: transparent;
+}
+
+/* line 37, ../sass/screen.scss */
+#container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* line 46, ../sass/screen.scss */
+#container.waitingForTurn {
+  cursor: wait !important;
+}
+
+/* line 51, ../sass/screen.scss */
+#containerBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: black url('../tex/universe.jpg') no-repeat center;
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  opacity: 0.25;
+}
+
+/* line 64, ../sass/screen.scss */
+.pan {
+  background: rgba(0, 255, 128, 0.25);
+  position: absolute;
+}
+/* line 68, ../sass/screen.scss */
+.pan.left, .pan.right {
+  top: 0;
+  height: 100%;
+}
+/* line 73, ../sass/screen.scss */
+.pan.left {
+  left: 0;
+}
+/* line 77, ../sass/screen.scss */
+.pan.right {
+  right: 0;
+}
+/* line 81, ../sass/screen.scss */
+.pan.top, .pan.bottom {
+  width: 100%;
+}
+/* line 85, ../sass/screen.scss */
+.pan.top {
+  top: 0;
+}
+/* line 89, ../sass/screen.scss */
+.pan.bottom {
+  bottom: 0;
+}
+/* line 93, ../sass/screen.scss */
+.pan, .pan.diag {
+  width: 128px;
+  height: 128px;
+}
+
+/* line 119, ../sass/screen.scss */
+#actions.tooltip .buttons a span, #actions.tooltip .stats, .planetModalAction.tooltip .buttons a span, .planetModalAction.tooltip .stats, #messageQueue.tooltip .buttons a span, #messageQueue.tooltip .stats, #mainMenu.tooltip .buttons a span, #mainMenu.tooltip .stats, #helpButton.tooltip .buttons a span, #helpButton.tooltip .stats, #skipTurnButton.tooltip .buttons a span, #skipTurnButton.tooltip .stats {
+  border-color: transparent;
+}
+
+/* line 125, ../sass/screen.scss */
+#actions {
+  z-index: 9999;
+}
+
+/* line 129, ../sass/screen.scss */
+#actions .stats, .planetModalAction .stats, #messageQueue .stats {
+  font-size: 11px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.35);
+  overflow: auto;
+}
+/* line 135, ../sass/screen.scss */
+#actions .stats dt, #actions .stats dd, .planetModalAction .stats dt, .planetModalAction .stats dd, #messageQueue .stats dt, #messageQueue .stats dd {
+  float: left;
+  width: 79px;
+  text-align: left;
+  padding: 0 8px 0 25px;
+}
+/* line 142, ../sass/screen.scss */
+#actions .stats dt, .planetModalAction .stats dt, #messageQueue .stats dt {
+  display: none;
+}
+/* line 146, ../sass/screen.scss */
+#actions .stats dd.colonize, .planetModalAction .stats dd.colonize, #messageQueue .stats dd.colonize {
+  background: url('../tex/sm-colonize.png?1324239294') no-repeat left center, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(13, 13, 13, 0)), color-stop(50%, rgba(13, 13, 13, 0.15)), color-stop(50%, rgba(13, 13, 13, 0.25)), color-stop(100%, rgba(13, 13, 13, 0.15))), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.25)), color-stop(100%, rgba(0, 0, 0, 0.25)));
+  background: url('../tex/sm-colonize.png?1324239294') no-repeat left center, -webkit-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-colonize.png?1324239294') no-repeat left center, -moz-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-colonize.png?1324239294') no-repeat left center, -o-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -o-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-colonize.png?1324239294') no-repeat left center, -ms-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -ms-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-colonize.png?1324239294') no-repeat left center, linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+}
+/* line 150, ../sass/screen.scss */
+#actions .stats dd.mine, .planetModalAction .stats dd.mine, #messageQueue .stats dd.mine {
+  background: url('../tex/sm-mine.png?1324239265') no-repeat left center, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(13, 13, 13, 0)), color-stop(50%, rgba(13, 13, 13, 0.15)), color-stop(50%, rgba(13, 13, 13, 0.25)), color-stop(100%, rgba(13, 13, 13, 0.15))), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.25)), color-stop(100%, rgba(0, 0, 0, 0.25)));
+  background: url('../tex/sm-mine.png?1324239265') no-repeat left center, -webkit-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-mine.png?1324239265') no-repeat left center, -moz-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-mine.png?1324239265') no-repeat left center, -o-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -o-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-mine.png?1324239265') no-repeat left center, -ms-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -ms-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-mine.png?1324239265') no-repeat left center, linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background-color: #f5993d;
+}
+/* line 155, ../sass/screen.scss */
+#actions .stats dd.fortify, .planetModalAction .stats dd.fortify, #messageQueue .stats dd.fortify {
+  background: url('../tex/sm-fortify.png?1324434060') no-repeat left center, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(13, 13, 13, 0)), color-stop(50%, rgba(13, 13, 13, 0.15)), color-stop(50%, rgba(13, 13, 13, 0.25)), color-stop(100%, rgba(13, 13, 13, 0.15))), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.25)), color-stop(100%, rgba(0, 0, 0, 0.25)));
+  background: url('../tex/sm-fortify.png?1324434060') no-repeat left center, -webkit-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-fortify.png?1324434060') no-repeat left center, -moz-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-fortify.png?1324434060') no-repeat left center, -o-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -o-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-fortify.png?1324434060') no-repeat left center, -ms-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -ms-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: url('../tex/sm-fortify.png?1324434060') no-repeat left center, linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background-color: #47cfeb;
+}
+/* line 161, ../sass/screen.scss */
+#actions .stats dt + dd, .planetModalAction .stats dt + dd, #messageQueue .stats dt + dd {
+  border-right: 1px solid rgba(0, 0, 0, 0.35);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+/* line 166, ../sass/screen.scss */
+#actions .stats dt:first-child + dd, .planetModalAction .stats dt:first-child + dd, #messageQueue .stats dt:first-child + dd {
+  -moz-border-radius: 0 0 0 6px;
+  -webkit-border-radius: 0 0 0 6px;
+  -o-border-radius: 0 0 0 6px;
+  -ms-border-radius: 0 0 0 6px;
+  -khtml-border-radius: 0 0 0 6px;
+  border-radius: 0 0 0 6px;
+  border-left: 0;
+  padding-left: 26px;
+}
+/* line 173, ../sass/screen.scss */
+#actions .stats dt + dd:last-child, .planetModalAction .stats dt + dd:last-child, #messageQueue .stats dt + dd:last-child {
+  border-right: 0;
+  -moz-border-radius: 0 0 6px 0;
+  -webkit-border-radius: 0 0 6px 0;
+  -o-border-radius: 0 0 6px 0;
+  -ms-border-radius: 0 0 6px 0;
+  -khtml-border-radius: 0 0 6px 0;
+  border-radius: 0 0 6px 0;
+  padding-right: 9px;
+}
+
+/* line 180, ../sass/screen.scss */
+#actions.tooltip, .planetModalAction, #messageQueue, #helpButton, #skipTurnButton {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  width: 196px;
+}
+/* line 184, ../sass/screen.scss */
+#actions.tooltip h1, .planetModalAction h1, #messageQueue h1, #helpButton h1, #skipTurnButton h1 {
+  font-size: 12px;
+}
+/* line 188, ../sass/screen.scss */
+#actions.tooltip .buttons, .planetModalAction .buttons, #messageQueue .buttons, #helpButton .buttons, #skipTurnButton .buttons {
+  display: none;
+}
+/* line 192, ../sass/screen.scss */
+#actions.tooltip .stats, .planetModalAction .stats, #messageQueue .stats, #helpButton .stats, #skipTurnButton .stats {
+  height: auto;
+  border-color: transparent;
+  background-color: transparent;
+}
+/* line 197, ../sass/screen.scss */
+#actions.tooltip .stats dd, #actions.tooltip .stats dt:first-child + dd, #actions.tooltip .stats dt + dd:last-child, .planetModalAction .stats dd, .planetModalAction .stats dt:first-child + dd, .planetModalAction .stats dt + dd:last-child, #messageQueue .stats dd, #messageQueue .stats dt:first-child + dd, #messageQueue .stats dt + dd:last-child, #helpButton .stats dd, #helpButton .stats dt:first-child + dd, #helpButton .stats dt + dd:last-child, #skipTurnButton .stats dd, #skipTurnButton .stats dt:first-child + dd, #skipTurnButton .stats dt + dd:last-child {
+  width: 161px;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  padding: 0 8px 0 25px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  -khtml-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 207, ../sass/screen.scss */
+.message, #mainMenu {
+  position: absolute;
+  width: 680px;
+  max-width: 100%;
+  height: 640px;
+  max-height: 90%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* line 220, ../sass/screen.scss */
+.message .startGame, #mainMenu .startGame {
+  background-color: #33cc33;
+}
+/* line 224, ../sass/screen.scss */
+.message .startGame:hover, #mainMenu .startGame:hover {
+  background-color: #19e619;
+}
+/* line 228, ../sass/screen.scss */
+.message .startGame:active, #mainMenu .startGame:active {
+  background-color: #0f8a0f;
+}
+/* line 233, ../sass/screen.scss */
+.message .content, #mainMenu .content {
+  font-size: 14px;
+  line-height: 24px;
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  top: 30px;
+  margin: auto;
+  overflow: auto;
+  padding: 16px;
+}
+/* line 246, ../sass/screen.scss */
+.message .content img, #mainMenu .content img {
+  max-width: 100%;
+  height: auto;
+}
+/* line 251, ../sass/screen.scss */
+.message .content h2, #mainMenu .content h2 {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 auto 24px;
+  clear: both;
+}
+/* line 260, ../sass/screen.scss */
+.message .content p, #mainMenu .content p {
+  font-weight: normal;
+  margin: 0 auto 24px;
+}
+/* line 265, ../sass/screen.scss */
+.message .content ul, #mainMenu .content ul {
+  clear: both;
+  list-style: square inside;
+}
+/* line 270, ../sass/screen.scss */
+.message .content > *:last-child, #mainMenu .content > *:last-child {
+  margin-bottom: 0;
+}
+/* line 275, ../sass/screen.scss */
+.message#won, .message#lost, .message#stalemate, #mainMenu#won, #mainMenu#lost, #mainMenu#stalemate {
+  text-align: center;
+  height: 332px;
+  display: none;
+}
+/* line 278, ../sass/screen.scss */
+.message#won .content, .message#lost .content, .message#stalemate .content, #mainMenu#won .content, #mainMenu#lost .content, #mainMenu#stalemate .content {
+  bottom: 0;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+}
+/* line 285, ../sass/screen.scss */
+.message#won, #mainMenu#won {
+  height: 660px;
+  background-color: #14b814;
+}
+/* line 290, ../sass/screen.scss */
+.message#lost, #mainMenu#lost {
+  background-color: #5c0a0a;
+}
+/* line 294, ../sass/screen.scss */
+.message#stalemate, #mainMenu#stalemate {
+  background-color: #b8b814;
+}
+
+/* line 300, ../sass/screen.scss */
+#needHelp {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 96px;
+  margin: auto;
+  width: 216px;
+  text-align: center;
+  -moz-border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -o-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -khtml-border-radius: 24px;
+  border-radius: 24px;
+  height: 48px;
+  line-height: 48px;
+  z-index: 1;
+  /*just because*/
+  font-size: 32px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.15)), color-stop(50%, rgba(255, 255, 255, 0.25)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+  background-color: #337fcc;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 -2px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+}
+/* line 320, ../sass/screen.scss */
+#needHelp:hover {
+  background-color: #197fe6;
+  opacity: 1;
+}
+/* line 324, ../sass/screen.scss */
+#needHelp:active {
+  background-color: #0f4c8a;
+}
+
+/* line 329, ../sass/screen.scss */
+#modalAction, #waitingForPlayers {
+  max-width: 720px;
+}
+/* line 333, ../sass/screen.scss */
+#modalAction strong, #waitingForPlayers strong {
+  font-weight: bold;
+}
+/* line 337, ../sass/screen.scss */
+#modalAction h1, #waitingForPlayers h1 {
+  height: 48px;
+  line-height: 48px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* line 346, ../sass/screen.scss */
+#waitingForPlayers {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 96px;
+  margin: auto;
+  height: 48px;
+  background-color: #4b14b8;
+}
+
+/* line 356, ../sass/screen.scss */
+#modalAction {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 96px;
+  margin: auto;
+  height: 80px;
+}
+/* line 364, ../sass/screen.scss */
+#modalAction #cancelModalAction {
+  background-color: #cc3333;
+}
+/* line 369, ../sass/screen.scss */
+#modalAction #cancelModalAction:hover {
+  background-color: #e61919;
+}
+/* line 373, ../sass/screen.scss */
+#modalAction #cancelModalAction:active {
+  background-color: #8a0f0f;
+}
+
+/* line 379, ../sass/screen.scss */
+.planetModalAction {
+  padding-bottom: 34px;
+}
+/* line 382, ../sass/screen.scss */
+.planetModalAction .selectModalAction {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* line 388, ../sass/screen.scss */
+#helpButton {
+  width: 128px;
+  position: absolute;
+  top: auto;
+  bottom: 32px;
+  left: 32px;
+  right: auto;
+  height: 28px;
+  background-color: rgba(255, 255, 255, 0.65) !important;
+}
+/* line 398, ../sass/screen.scss */
+#helpButton h1 {
+  color: #000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+/* line 405, ../sass/screen.scss */
+#skipTurnButton {
+  position: absolute;
+  top: auto;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  height: 28px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.65) !important;
+}
+/* line 415, ../sass/screen.scss */
+#skipTurnButton h1 {
+  color: #000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+/* line 423, ../sass/screen.scss */
+#messageQueue {
+  width: 256px;
+  position: absolute;
+  right: 32px;
+  top: auto;
+  bottom: 32px;
+  left: auto;
+  height: 256px;
+  background-color: rgba(255, 255, 255, 0.65) !important;
+}
+/* line 433, ../sass/screen.scss */
+#messageQueue h1 {
+  color: #000;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+/* line 439, ../sass/screen.scss */
+#messageQueue.collapsed {
+  height: 28px;
+  overflow: hidden;
+}
+/* line 444, ../sass/screen.scss */
+#messageQueue .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 32px;
+  bottom: 0;
+  margin: auto;
+  overflow: auto;
+  font-size: 11px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 458, ../sass/screen.scss */
+#messageQueue .content p {
+  margin: 4px 0;
+  padding: 2px 4px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.65);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(13, 13, 13, 0)), color-stop(50%, rgba(13, 13, 13, 0.15)), color-stop(50%, rgba(13, 13, 13, 0.25)), color-stop(100%, rgba(13, 13, 13, 0.15))), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.25)), color-stop(100%, rgba(0, 0, 0, 0.25)));
+  background: -webkit-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: -moz-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: -o-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -o-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: -ms-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -ms-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background: linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+/* line 468, ../sass/screen.scss */
+#messageQueue .content p:hover {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(13, 13, 13, 0)), color-stop(50%, rgba(13, 13, 13, 0.15)), color-stop(50%, rgba(13, 13, 13, 0.25)), color-stop(100%, rgba(13, 13, 13, 0.15))), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -moz-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -ms-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+/* line 472, ../sass/screen.scss */
+#messageQueue .content p:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(13, 13, 13, 0)), color-stop(50%, rgba(13, 13, 13, 0.15)), color-stop(50%, rgba(13, 13, 13, 0.25)), color-stop(100%, rgba(13, 13, 13, 0.15))), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0.5)));
+  background: -webkit-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: -moz-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: -o-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: -ms-linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), -ms-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(top, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.15) 50%, rgba(13, 13, 13, 0.25) 50%, rgba(13, 13, 13, 0.15) 100%), linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/* line 480, ../sass/screen.scss */
+p.army_count {
+  position: absolute;
+  color: #ffffff;
+  text-shadow: #333333 2px 2px 4px;
+  font-size: 24pt;
+  font-weight: bold;
+  font-family: Trebuchet MS, sans-serif;
+  user-select: none;
+  cursor: default;
+}
+
+/* line 492, ../sass/screen.scss */
+#mainMenu .content {
+  background: url('../tex/256-colonize.png?1324476373') no-repeat bottom center;
+}
+/* line 496, ../sass/screen.scss */
+#mainMenu .content h2 {
+  text-align: center;
+}
+/* line 501, ../sass/screen.scss */
+#mainMenu form div {
+  font-size: 16px;
+  display: block;
+  width: 196px;
+  margin: 0 auto;
+}
+/* line 508, ../sass/screen.scss */
+#mainMenu form select {
+  font-size: 16px;
+}
+/* line 512, ../sass/screen.scss */
+#mainMenu form label {
+  display: inline-block;
+  width: 96px;
+}
+/* line 517, ../sass/screen.scss */
+#mainMenu label:after {
+  content: ":";
+}

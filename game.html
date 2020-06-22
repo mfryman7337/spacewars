@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CS 679 Project 3</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="_/css/screen.css">
+    <!-- WebGL Debugging Tools -->
+    <script type="text/javascript" charset="utf-8" src="_/js/webgl-debug.js"></script>
+    <!-- Extend JavaScript objects -->
+    <script type="text/javascript" charset="utf-8" src="_/js/sugar.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" charset="utf-8" src="_/js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/jquery.hotkeys.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/jquery.mousewheel.js"></script>
+    <!-- Prefix Free -->
+    <script type="text/javascript" charset="utf-8" src="_/js/prefixfree.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/prefixfree.jquery.js"></script>
+    <!-- RequestAnimationFrame -->
+    <script type="text/javascript" charset="utf-8" src="_/js/RequestAnimationFrame.js"></script>
+    <!-- Our Stuff -->
+    <script type="text/javascript" charset="utf-8" src="_/js/vect.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/util.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/Engine.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/camera.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/EdgeScroller.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/player.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/stars.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/Queue.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/NameGenerator.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/PlanetEdge.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/PlanetGraph.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/PlanetVertex.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/boundary.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/map_gen.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/TurnController.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/UIController.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/MenuController.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/MessageQueue.js"></script>
+	<script type="text/javascript" charset="utf-8" src="_/js/TooltipController.js"></script>
+    <script type="text/javascript" charset="utf-8" src="_/js/App.js"></script>
+</head>
+
+<body>
+    <p style="position: absolute; z-index: 2; left: 0px; top: 0px; color: white;">FPS: <span id="fps">0</span></p>
+    
+    <div id="container">
+        <div id="overlay" style="position: absolute; width: 50px;"></div>
+    </div>
+    
+    <div id="actions" class="hidden">
+        <h1>Actions</h1>
+        <div class="buttons">
+                <a id="attackAction"><strong>A</strong>ttack <span>Attack this planet with nearby troops.</span></a>
+                <a id="colonizeAction"><strong>C</strong>olonize <span>Connect this planet to your network.</span></a>
+                <a id="mineAction"><strong>M</strong>ine <span>Extract resources from the planet to build troops.</span></a>
+                <a id="fortifyAction"><strong>F</strong>ortify <span>Create a base with troops to attack and defend.</span></a>
+                <a id="cancelAction">Cancel <span>Close this menu and resume scrolling.</span></a>
+        </div>
+        <dl class="stats">
+            <dt class="colonize">Colonized</dt>
+            <dd class="colonize"><span class="no-colony">Nobody</span></dd>
+            <dt class="mine" title="Number of resources available on this planet.">Resources</dt>
+            <dd class="mine"><span class="amount">0</span> Rsrcs</dd>
+            <dt class="fortify">Troops</dt>
+            <dd class="fortify" title="Number of troops available on this planet."><span class="amount">0</span> Troops</dd>
+        </dl>
+    </div>
+	
+	<div id="mainMenu">
+		<h1>Main Menu</h1>
+		<div class="content">
+			<h2>Welcome to Space Wars<br>(Group 1 Edition)</h2>
+			<form id="engineOptions" name="engineOptions">
+				<div>
+					<label for="mapSize">Map Size</label>
+					<select name="mapSize" id="mapSize">
+						<option value="1">Small</option>
+						<option value="2">Medium</option>
+						<option value="3">Large</option>
+						<option value="4">Huge</option>
+					</select>
+				</div>
+			</form>
+		</div>
+		<p class="startGame" id="engineInit">Start Game</p>
+	</div>
+	
+	<div id="waitingForPlayers">
+		<h1>Waiting for other players&hellip;</h1>
+	</div>
+	
+	<div class="planetModalAction hidden">
+		<h1>Planet Name</h1>
+        <dl class="stats">
+            <dt class="colonize">Colonized</dt>
+            <dd class="colonize"><span class="no-colony">Nobody</span></dd>
+            <dt class="mine" title="Number of resources available on this planet.">Resources</dt>
+            <dd class="mine"><span class="amount">0</span> Rsrcs</dd>
+            <dt class="fortify">Troops</dt>
+            <dd class="fortify" title="Number of troops available on this planet."><span class="amount">0</span> Troops</dd>
+        </dl>
+		<p class="selectModalAction">Select</p>
+	</div>
+	
+	<div id="messageQueue">
+		<h1 title="Click to expand or collapse the message queue.">Messages</h1>
+		<div class="content">
+		</div>
+	</div>
+	
+	<div id="skipTurnButton">
+		<h1>Skip (Space)</h1>
+	</div>
+	
+	<div id="helpButton">
+		<h1>Help</h1>
+	</div>
+</body>
+</html>

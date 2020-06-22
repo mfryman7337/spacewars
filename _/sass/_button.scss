@@ -1,0 +1,99 @@
+@import "_core.scss";
+
+.button {
+	text-align: center;
+    cursor: pointer;
+//    @include single-transition("transition, color, border-color, background-color, box-shadow", "0.15s", "ease-in-out");
+    float: left;
+    width: $actionsButtonWidth - $actionsBorderWidth * 6;
+    height: $actionsButtonWidth - $actionsBorderWidth * 6;
+    line-height: $actionsButtonWidth - $actionsBorderWidth * 6 + 49px;
+    background-position: center -14px;
+    background-repeat: no-repeat;
+    margin: ($actionsBorderWidth * 2 + 4px) ($actionsBorderWidth * 2) ($actionsBorderWidth * 2 + 4px) ($actionsBorderWidth * 2);
+    @include border-radius($actionsBorderRadius);
+    border: $actionsBorderWidth solid transparent;
+    @include background-size($actionsButtonWidth $actionsButtonWidth);
+    @include box-shadow(0 2px 4px rgba(0,0,0,0.5));
+    background-color: rgba(255,255,255,0.25);
+    text-transform: capitalize;
+        
+    &:hover, &:focus {
+        color: #fff;
+        border-color: #fff;
+        background-color: hsla($actionsHue, 80, 40, 1);
+    }
+        
+    &:active {
+        @include box-shadow(0 -1px 2px rgba(0,0,0,0.5));
+        @include scale(0.975);
+        background-color: hsla($actionsHue, $actionsSat, $actionsLight / 2, 1);
+    }
+        
+    &.hidden {
+        display: none;
+    }
+        
+    strong {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+        
+    span {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+		z-index: 2;
+        text-transform: none;
+        background-color: inherit;
+        display: none;
+    }
+        
+    &:hover span, &:focus span {
+        display: block;
+    }
+        
+    // Apparently positioning gets relative when transforms are being applied. This attempts to minimize the appearance of related visual glitches during transform animation. */
+    &:active span {
+        display: none;
+    }
+        
+    &.disabled {
+        cursor: auto;
+//		@include single-transition("none");
+        background-image: none;
+        background-color: transparent;
+        border-color: transparent;
+        color: rgba(255,255,255,0.5);
+        @include box-shadow(0 1px 2px rgba(0,0,0,0.35));
+            
+        &:active {
+            @include scale(1.0);
+        };
+            
+        &:hover span, &:focus span, &:active span {
+            display: none;
+        }
+    }
+        
+    &#colonizeAction {
+        @include action-button(120, "84-colonize.png");
+    }
+        
+    &#mineAction {
+        @include action-button(30, "84-mine.png");
+    }
+        
+    &#fortifyAction {
+        @include action-button(190, "84-fortify.png");
+    }
+        
+    &#cancelAction {
+        @include action-button(0, "84-cancel.png");
+    }
+        
+    &#attackAction {
+        @include action-button(120, "84-attack.png");
+    }
+}

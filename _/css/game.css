@@ -1,0 +1,11 @@
+p.army_count {
+    position: absolute;
+    color: #ffffff;
+    text-shadow: #333333 2px 2px 4px;
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Trebuchet MS, sans-serif;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+}

@@ -1,0 +1,520 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+@import "_core.scss";
+@import "_button.scss";
+@import "_box.scss";
+
+body {
+    // Prevents elastic scrolling on Mac OS X Lion
+    overflow: hidden;
+    font: 16px / 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #000;
+}
+
+#promoBody {
+	overflow: auto;
+}
+
+#bigImage {
+	display: block;
+	margin: 0 auto;
+	
+	img {
+		border: 0;
+	}
+}
+
+::selection {
+    background-color: transparent;
+}
+
+#container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+	
+	
+	&.waitingForTurn {
+		cursor: wait !important;
+	}
+}
+
+#containerBg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #000 image-url("universe.jpg") no-repeat center;
+    @include background-size(100% 100%);
+    opacity: 0.25;
+}
+
+// Debug Panning Areas
+.pan {
+    background: rgba(0,255,128,0.25);
+    position: absolute;
+    
+    &.left, &.right {
+        top: 0;
+        height: 100%;
+    }
+    
+    &.left {
+        left: 0;
+    }
+    
+    &.right {
+        right: 0;
+    }
+    
+    &.top, &.bottom {
+        width: 100%;
+    }
+    
+    &.top {
+        top: 0;
+    }
+    
+    &.bottom {
+        bottom: 0;
+    }
+    
+    &, &.diag {
+        width: 128px;
+        height: 128px;
+    }
+}
+
+#actions, .planetModalAction, #messageQueue, #mainMenu, #helpButton, #skipTurnButton {
+    @extend .box;
+    
+    .buttons {
+        @extend .box-content;
+    }
+    
+    .buttons a span {
+        @extend .statusText;
+    }
+    
+    .buttons a span, .stats {
+        @extend .bottomBar;
+    }
+       
+    .buttons a {
+        @extend .button;
+    }
+    
+    &.tooltip {
+        .buttons a span, .stats {
+            border-color: transparent;
+        }
+    }
+}
+
+#actions {
+	z-index: 9999;
+}
+
+#actions .stats, .planetModalAction .stats, #messageQueue .stats {
+	font-size: 11px;
+	font-weight: bold;
+	background-color: rgba(0,0,0,0.35);
+    overflow: auto;
+	
+    dt, dd {
+        float: left;
+		width: 79px;
+		text-align: left;
+		padding: 0 8px 0 25px;
+    }
+	
+	dt {
+		display: none;
+	}
+	
+	dd.colonize {
+		@include background(image-url("sm-colonize.png") no-repeat left center, linear-gradient(top, hsla(0,0,$actionsLight / 4,0) 0%,hsla(0,0,$actionsLight / 4,0.15) 50%,hsla(0,0,$actionsLight / 4,0.25) 50%,hsla(0,0,$actionsLight / 4,0.15) 100%), linear-gradient(top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%));
+	}
+	
+	dd.mine {
+		@include background(image-url("sm-mine.png") no-repeat left center, linear-gradient(top, hsla(0,0,$actionsLight / 4,0) 0%,hsla(0,0,$actionsLight / 4,0.15) 50%,hsla(0,0,$actionsLight / 4,0.25) 50%,hsla(0,0,$actionsLight / 4,0.15) 100%), linear-gradient(top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%));
+		background-color: hsl(30,90,60);
+	}
+	
+	dd.fortify {
+		@include background(image-url("sm-fortify.png") no-repeat left center, linear-gradient(top, hsla(0,0,$actionsLight / 4,0) 0%,hsla(0,0,$actionsLight / 4,0.15) 50%,hsla(0,0,$actionsLight / 4,0.25) 50%,hsla(0,0,$actionsLight / 4,0.15) 100%), linear-gradient(top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%));
+		background-color: hsl(190,80,60);
+	}
+
+	
+	dt+dd {
+		border-right: 1px solid rgba(0,0,0,0.35);
+		border-left: 1px solid rgba(255,255,255,0.15);
+	}
+	
+	dt:first-child+dd {
+		@include border-radius(0 0 0 6px);
+		 border-left: 0;
+		 padding-left: 26px;
+	}
+
+	
+	dt+dd:last-child {
+		 border-right: 0;
+		@include border-radius(0 0 6px 0);
+		 padding-right: 9px;
+	}
+}
+
+#actions.tooltip, .planetModalAction, #messageQueue, #helpButton, #skipTurnButton {
+    background-color: rgba(0,0,0,0.85) !important;
+    width: 196px;
+    
+    h1 {
+        font-size: 12px;
+    }
+    
+    .buttons {
+        display: none;
+    }
+    
+    .stats {
+        height: auto;
+		border-color: transparent;
+		background-color: transparent;
+        
+        dd, dt:first-child+dd, dt+dd:last-child {
+			width: 196px - 8px - 25px - 2px;
+			border-left: 0 !important;
+			border-right: 0 !important;
+			padding: 0 8px 0 25px;
+			@include border-radius(0);
+		}
+    }
+}
+
+.message, #mainMenu {
+    @extend .box;
+    position: absolute;
+    width: 680px;
+    max-width: 100%;
+    height: 640px;
+    max-height: 90%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    .startGame {
+        @extend .bottomButton;
+        background-color: hsla(120,60,50,1);
+        
+        &:hover {
+            background-color: hsla(120,80,50,1);
+        }
+        
+        &:active {
+            background-color: hsla(120,80,30,1);
+        }
+    }
+    
+    .content {
+        @extend .box-content;
+        font-size: 14px;
+        line-height: 24px;
+        position: absolute;
+        bottom: 32px;
+        left: 0;
+        right: 0;
+        top: 30px;
+        margin: auto;
+        overflow: auto;
+        padding: 16px;
+        
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		
+        h2 {
+            font-size: 32px;
+            line-height: 48px;
+            font-weight: 300;
+            text-align: center;
+            margin: 0 auto 24px;
+            clear: both;
+        }
+        
+        p {
+            font-weight: normal;
+            margin: 0 auto 24px;
+        }
+
+        ul {
+            clear: both;
+            list-style: square inside;
+        }
+        
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    &#won, &#lost, &#stalemate {
+        text-align: center;
+        height: 332px;
+		.content {
+			bottom: 0;
+			@include border-radius(6px);
+		}
+		display: none;
+    }
+    
+    &#won {
+		height: 660px;
+        background-color: hsla(120,80,40,1);
+    }
+    
+    &#lost {
+        background-color: hsla(0,80,20,1);
+    }
+	
+    &#stalemate {
+        background-color: hsla(60,80,40,1);
+    }
+}
+
+// Help Button at the bottom of the screen
+#needHelp {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 96px;
+    margin: auto;
+    width: 216px;
+    text-align: center;
+    @include border-radius(24px);
+    height: 48px;
+    line-height: 48px;
+    z-index: 1; /*just because*/
+    font-size: 32px;
+    @include background-image(linear-gradient(top, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0) 100%));
+    background-color: hsla(210,60,50,1);
+    cursor: pointer;
+    // @include box-shadow(0 0 4px 2px hsla(210,80,50,0.65), 0 4px 32px 2px rgba(0,0,0,0.85));
+    color: #fff;
+    text-shadow: 0 -2px 2px hsla($actionsHue,$actionsSat / 2, 0, 0.5);
+    opacity: 0.5;
+    &:hover {
+        background-color: hsla(210,80,50,1);
+        opacity: 1;
+    }
+    &:active {
+        background-color: hsla(210,80,30,1);
+    }
+}
+
+#modalAction, #waitingForPlayers {
+    @extend .box;
+	max-width: 720px;
+	
+	strong {
+		font-weight: bold;
+	}
+	
+	h1 {
+		height: 48px;
+		line-height: 48px;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+}
+
+#waitingForPlayers {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 96px;
+	margin: auto;
+	height: 48px;
+	background-color: hsla(260, 80, 40, 1.0);
+}
+
+#modalAction {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 96px;
+	margin: auto;
+	height: 80px;
+	
+    #cancelModalAction {
+        @extend .bottomButton;
+	
+	    background-color: hsla(0,60,50,1);
+        
+	    &:hover {
+	        background-color: hsla(0,80,50,1);
+	    }
+        
+	    &:active {
+	        background-color: hsla(0,80,30,1);
+	    }
+    }
+}
+
+.planetModalAction {
+	padding-bottom: 34px;
+	
+	.selectModalAction {
+		@extend .bottomButton;
+		@include border-radius(6px);
+	}
+}
+
+#helpButton {
+	width: 128px;
+	position: absolute;
+	top: auto;
+	bottom: 32px;
+	left: 32px;
+	right: auto;
+	height: 28px;
+	background-color: rgba(255,255,255,0.65) !important;
+	
+	h1 {
+		color: #000;
+		text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+		cursor: pointer;
+	}
+}
+
+#skipTurnButton {
+	position: absolute;
+	top: auto;
+	bottom: 32px;
+	left: 0;
+	right: 0;
+	height: 28px;
+	margin: auto;
+	background-color: rgba(255,255,255,0.65) !important;
+	
+	h1 {
+		color: #000;
+		text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+		cursor: pointer;
+	}
+}
+
+
+#messageQueue {
+	width: 256px;
+	position: absolute;
+	right: 32px;
+	top: auto;
+	bottom: 32px;
+	left: auto;
+	height: 256px;
+	background-color: rgba(255,255,255,0.65) !important;
+	
+	h1 {
+		color: #000;
+		text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+		cursor: pointer;
+	}
+	
+	&.collapsed {
+		height: 28px;
+		overflow: hidden;
+	}
+	
+    .content {
+		@extend .box-content;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 32px;
+		bottom: 0;
+		margin: auto;
+		overflow: auto;
+		
+		font-size: 11px;
+		
+		@include border-radius(4px);
+		
+        p {
+			margin: 4px 0;
+			padding: 2px 4px;
+			@include border-radius(2px);
+			font-weight: 500;
+			background-color: rgba(255,255,255,0.65);
+			@include background(linear-gradient(top, hsla(0,0,$actionsLight / 4,0) 0%,hsla(0,0,$actionsLight / 4,0.15) 50%,hsla(0,0,$actionsLight / 4,0.25) 50%,hsla(0,0,$actionsLight / 4,0.15) 100%), linear-gradient(top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%));
+			border: 1px solid rgba(0,0,0,0.35);
+			cursor: pointer;
+			
+			&:hover {
+				@include background(linear-gradient(top, hsla(0,0,$actionsLight / 4,0) 0%,hsla(0,0,$actionsLight / 4,0.15) 50%,hsla(0,0,$actionsLight / 4,0.25) 50%,hsla(0,0,$actionsLight / 4,0.15) 100%), linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%));
+			}
+			
+			&:active {
+				@include background(linear-gradient(top, hsla(0,0,$actionsLight / 4,0) 0%,hsla(0,0,$actionsLight / 4,0.15) 50%,hsla(0,0,$actionsLight / 4,0.25) 50%,hsla(0,0,$actionsLight / 4,0.15) 100%), linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%));
+			}
+
+		}
+	}
+}
+
+p.army_count {
+    position: absolute;
+    color: #ffffff;
+    text-shadow: #333333 2px 2px 4px;
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Trebuchet MS, sans-serif;
+    user-select: none;
+    cursor: default;
+}
+
+#mainMenu {
+	.content {
+		@extend .box-content;
+		background: image-url("256-colonize.png") no-repeat bottom center;
+		
+		h2 {
+			text-align: center;
+		}
+	}
+	
+	form div {
+		font-size: 16px;
+		display: block;
+		width: 196px;
+		margin: 0 auto;
+	}
+	
+	form select {
+		font-size: 16px;
+	}
+	
+	form label {
+		display: inline-block;
+		width: 96px;
+	}
+	
+	label:after {
+		content: ":";
+	}
+}

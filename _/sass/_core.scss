@@ -1,0 +1,98 @@
+@mixin action-button($hue: 210, $image: "84-colonize.png") {
+    @include background-image(image-url($image), linear-gradient(top, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0) 100%));
+/*    span {
+        background-image: image-url($image);
+    }*/
+    
+    &:hover, &:focus {
+        background-color: hsla($hue, 80, 40, 1);
+    }
+    
+    &:active {
+        background-color: hsla($hue, 80, 30, 1);
+    }
+    
+    &.disabled {
+        background-color: transparent;
+        @include background-image(image-url($image));
+    }
+}
+
+$actionsDtHeight: 32px;
+$actionsPHeight: 24px;
+$actionsButtonWidth: 84px;
+$actionHelpWidth: 18px;
+
+$actionsX: 4;
+$actionsY: 1;
+
+$actionsBorderWidth: 2px;
+$actionsPadding: $actionsBorderWidth * 2;
+$actionsBoxWidth: $actionsButtonWidth * $actionsX + $actionsPadding * 2;
+$actionsBoxHeight: $actionsDtHeight + $actionsButtonWidth * $actionsY + $actionsPadding * 2 - $actionsBorderWidth;
+$actionsBorderRadius: 8px;
+
+$actionsHue: 210;
+$actionsSat: 0;
+$actionsLight: 20;
+
+$actionsDefaultColor: hsla($actionsHue,$actionsSat,$actionsLight,1);
+
+/*$shinyGradient: "linear-gradient(top, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0) 100%)";*/
+/*$darkGradient: "linear-gradient(top, hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0) 0%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.15) 50%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.25) 50%,hsla($actionsHue,$actionsSat / 2,$actionsLight / 4,0.15) 100%)";*/
+
+// Bright gradient for heading and buttons
+.gradient {
+    @include background-image(linear-gradient(top, rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0) 100%));
+}
+    
+.gradient.dark {
+    @include background-image(linear-gradient(top, hsla(0,0,$actionsLight / 4,0) 0%,hsla(0,0,$actionsLight / 4,0.15) 50%,hsla(0,0,$actionsLight / 4,0.25) 50%,hsla(0,0,$actionsLight / 4,0.15) 100%));
+}
+
+// Bottom bar design used for planet stats and action hints
+.bottomBar {
+    @extend .gradient.dark;
+    @extend .statusText;
+    line-height: $actionsPHeight;
+    height: $actionsPHeight;
+    font-size: 14px;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-top: none;
+    @include border-radius(0 0 $actionsBorderRadius $actionsBorderRadius);
+}
+
+.bottomButton {
+	@extend .bottomBar;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	z-index: 1;
+    font-size: 18px;
+    height: 32px;
+    line-height: 32px;
+    margin: auto;
+	@include single-transition("color, border-color, background-color", "0.15s", "ease-in-out");
+	
+    background-color: hsla(120,60,50,1);
+        
+    &:hover {
+        background-color: hsla(120,80,50,1);
+    }
+        
+    &:active {
+        background-color: hsla(120,80,30,1);
+    }
+}
+
+// General text styling for a bunch of things
+.statusText {
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

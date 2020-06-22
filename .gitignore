@@ -1,0 +1,9 @@
+.DS_Store
+.ds_store
+Thumbs.db
+.svn
+*~
+*.tmproj
+.sass-cache
+compass_app_log.txt
+cs679-p3.chproj

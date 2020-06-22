@@ -1,0 +1,83 @@
+/*- self-clearing floats ----------*/
+
+.mod:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+body {
+	/* Prevents elastic scrolling on Mac OS X Lion */
+	overflow: hidden;
+	font: 16px / 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: #000;
+}
+
+#container {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+/*	border: 1px solid #333;*/
+}
+
+.pan {
+	background: rgba(0,255,128,0.25);
+	position: absolute;
+}
+
+.pan.left {
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+
+.pan.right {
+	right: 0;
+	top: 0;
+	height: 100%;
+}
+
+.pan.top {
+	top: 0;
+	width: 100%;
+}
+
+.pan.bottom {
+	bottom: 0;
+	width: 100%;
+}
+
+.pan.left.top.diag {
+	top: 0;
+	width: 25%;
+}
+
+.pan.top.left.diag {
+	top: 0;
+	height: 25%;
+}
+
+.pan.right.top.diag {
+	right: 0;
+}
+
+.pan.left.bottom.diag {
+	top: auto;
+	bottom: 0;
+}
+
+.pan.right.bottom.diag {
+	top: auto;
+	right: 0;
+	bottom: 0;
+}
+
+.pan, .pan.diag {
+	width: 128px;
+	height: 128px;
+}

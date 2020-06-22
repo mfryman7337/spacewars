@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>CS 679 Project 3</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="_/css/screen.css">
+</head>
+<body>
+    <div class="message" id="help">
+        <h1>Help and Instructions</h1>
+        <div class="content">
+                <h2>Welcome to Space Wars!</h2>
+                <img src="_/help/gameplay.png" width="55%" height="auto" style="float: left; margin: 16px 16px 16px 0">
+                <p><strong>Space Wars</strong>, a game of interplanetary exploration and conquest! Here's the setup: it's you against the three other computer-controlled players in a fight to control the entire galaxy, i.e. the playing field.</p>
+                <p>You'll win it all if you conquer each and every one of the computer players' planets. Conversely, you'll lose if one of the computer players captures your very last planet.</p>
+                <h2>Getting Around</h2>
+				<img src="_/help/gettingAround.png" width="640" height="420" alt="GettingAround">
+                <p>Exploration starts off simple enough. The playing field is represented by a graph of planets, with each edge indicating a path from one planet to another. Planets colonized by a particular player have a <strong>glowing boundary around them</strong>. The planets surrounded by a light blue boundary are yours!</p>
+                <p>Move around the planet map by <strong>moving your mouse cursor towards the edges of the browser window</strong>. The camera view will automatically scroll the map for you. You can also <strong>use the mouse wheel (or a scrolling gesture) to zoom in and out</strong> of the map.</p>
+                <h2>Exploring and Acting</h2>
+                <img src="_/help/exploringAndActing.png" width="640" height="420" alt="ExploringAndActing">
+                <p>Non-glowy planets are <strong>uncolonized</strong>, so they're yours for the taking! Just click on an uncolonized planet and then click the <strong>Colonize</strong> button from the Action menu.</p>
+                <p style="clear: both">Once a planet has been colonized, you can strategize its role in your exploration and conquest with <strong>Mines</strong> and <strong>Fortifications</strong> (Forts for short).</p>
+				<h2>Messages</h2>
+				<img src="_/help/messages.png" width="640" height="420" alt="Messages">
+                <h2>Mining Planets</h2>
+                <img src="_/tex/help-mining.png" width="55%" height="auto" alt="Help Mining" style="float: left; clear: left; margin: 16px 32px 16px 0">
+                <p>Gain <strong>resources</strong> by building a <strong>Mine</strong> on a planet&mdash;simply click on a colonized planet and choose the <strong>Mine</strong> button to construct one.</p>
+                <p>Mined planets distribute resources across your planetary network, so nearby planets will receive a good supply resources, while distant planets may receive little or no resources.</p>
+                <h2>Fortifying Planets</h2>
+                <img src="_/tex/help-fortifying.png" width="55%" height="auto" alt="Help Fortifying" style="float: left; clear: left; margin: 16px 32px 16px 0">
+                <p>Resources are used to build and maintain troops on <strong>Fortified</strong> planets. Troops allow you to defend your planets from attack or conquest by other players. The number drawn on top of each planet displays the number of troops available to attack or defend from a given planet.</p>
+                <p style="clear: both">Fortified planets build new troops every turn, but only if the planet is connected to mining planets. Smartly managing both base types is the key to success!</p>
+                <p>Additionally, fortified planets <strong>distribute their military presence</strong> across neighboring colonized planets. You can effectively <strong>defend or attack from multiple unfortified planets</strong> with a small set of connected, neighboring fortified planets.</p>
+                <h2>Attacking Planets(!)</h2>
+                <img src="_/tex/help-attacking.png" width="55%" height="auto" alt="Help Fortifying" style="float: left; clear: left; margin: 16px 32px 16px 0">
+                <p>Inevitably players are going to start bumping elbows&hellip;there are only so many planets to go around. If you have a colonized planet with available troops near an enemy planet, click on the enemy planet and choose <strong>Attack</strong>! Depending on the outcome, you may:</p>
+                <ul>
+                    <li><strong>Completely eliminate the enemy's troops</strong>, letting you colonize the planet on your next move!</li>
+                    <li><strong>Automatically colonize the planet</strong> if there are no enemy troops there.</li>
+                    <li><strong>Lose the battle, lose all your troops</strong>, and risk losing your own planet!</li>
+                </ul>
+                <p style="clear: both">That should be everything! Thanks so much for playing (and reading).</p>
+        </div>
+        <p class="startGame" id="bigHelpStartGame">Click to Play the Game!</p>
+    </div>
+    
+    <div class="message" id="won">
+        <h1>Victory!</h1>
+        <div class="content">
+            <h2>You Won!!!!!!!!!!!!!!</h2>
+            <p>Seriously, that's awesome. Thanks for playing. Here's a celebratory picture:</p>
+			<img src="_/tex/malibu-space-station-wagon.jpg" width="676" height="438" alt="Malibu Space Station Wagon">
+            <p>&mdash; Joe, Russel, Zack and James</p>
+            <h2>Refresh your browser to play again!</h2>
+        </div>
+    </div>
+    
+    <div class="message" id="lost">
+        <h1>Defeat</h1>
+        <div class="content">
+            <h2>You Lost.</h2>
+            <p>That's a bummer. Feel free to try again!</p>
+            <p>Thanks for playing.</p>
+            <p>&mdash; Joe, Russel, Zack and James</p>
+            <h2>Please refresh your browser to play again.</h2>
+        </div>
+    </div>
+	
+    <div class="message" id="stalemate">
+        <h1>Stalemate</h1>
+        <div class="content">
+            <h2>You reached a Stalemate.</h2>
+            <p>Your inevitable end is to be slowly consumed by your galactic enemies<br>and/or fade into celestial obscurity. Existential, eh?<br>Thanks for playing.</p>
+            <p>&mdash; Joe, Russel, Zack and James</p>
+            <h2>Please refresh your browser to play again.</h2>
+        </div>
+    </div>
+</body>
+</html>
